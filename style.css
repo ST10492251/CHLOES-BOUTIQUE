@@ -7,18 +7,89 @@
       color: #ff1493;
       font-family: Poppins, sans-serif;
     }
+    
+    /* HEADER */
+.header {
+  background: #ff3fa8; /* bright pink */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header {
-      position: fixed;
-      background: #ff4db8;
-      color: white;
-      padding: 15px 0;
-    }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* DESKTOP NAV */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background: #ff73c6; /* lighter pink */
+}
+
+/* MOBILE STYLING */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+  }
+
+  .nav.open {
+    display: block;
+    background: #ff3fa8;
+    padding: 15px 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
     footer {
-      position: fixed;
-      background: #ff4db8;
-      color: white;
-      padding: 15px 0;
+  background: #ff3fa8; /* bright pink */
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+     
     }
 
     a, .btn {
@@ -34,13 +105,7 @@
       background: #ff007f;
     }
 
-    .nav-list li a {
-      position: absolute;
-      width: 200px;
-      padding: 10px;
-      margin: 5px 0;
-      color: white;
-    }
+
     .hero h2, .headline, .lead {
       color: #cc5c98;
     }

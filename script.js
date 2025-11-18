@@ -5,6 +5,12 @@
 
 (() => {
   'use strict';
+  const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
 
   /* -------------------- Configuration -------------------- */
   const CART_KEY = 'chloes_boutique_cart_v1';
