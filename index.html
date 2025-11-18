@@ -1,97 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chloe's Boutique — Home</title>
-  <meta name="description" content="Discover handcrafted clothing and accessories at Chloe’s Boutique. Elegant, sustainable, and timeless fashion for every occasion.">
-  <meta name="keywords" content="Chloe's Boutique, fashion, clothing, sustainable, dresses, accessories, South Africa">
-  <meta name="author" content="Chloe's Boutique Team">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chloe's Boutique — Modern Fashion</title>
+  <meta name="description" content="Chloe's Boutique — modern boutique with elegant affordable fashion, accessories, and workshops.">
   <link rel="canonical" href="https://st10492251.github.io/CHLOES-BOUTIQUE/">
-  <meta name="theme-color" content="#f9f3f0">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Chloe's Boutique — Handcrafted Fashion">
-  <meta property="og:description" content="Elegant, sustainable, handcrafted fashion from Chloe’s Boutique.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://st10492251.github.io/CHLOES-BOUTIQUE/">
+  <meta property="og:title" content="Chloe's Boutique">
+  <meta property="og:description" content="Handcrafted garments and accessories.">
   <meta property="og:image" content="images/og-image.jpg">
-
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <script defer src="js/script.js"></script>
-
-  <!-- Schema Markup -->
-
-   <!-- ===== SEO + Social + Structured Data ===== -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Chloe's Boutique — [PAGE TITLE]</title>
-<meta name="description" content="Chloe's Boutique — sustainable handcrafted clothing, repairs and workshops. Shop locally made garments.">
-<meta name="keywords" content="Chloe's Boutique, fashion, sewing, sustainable clothing, dresses, handbags">
-<meta name="author" content="Chloe's Boutique">
-<link rel="canonical" href="https://st10492251.github.io/CHLOES-BOUTIQUE/">
-
- <!-- Open Graph (Facebook, Instagram, WhatsApp) -->
-    <meta property="og:title" content="Chloe’s Boutique — Modern Fashion">
-    <meta property="og:description" content="Shop luxury fashion, handbags, and accessories at Chloe’s Boutique.">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://st10492251.github.io/CHLOES-BOUTIQUE/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chloe’s Boutique">
-    <meta name="twitter:description" content="Discover luxury modern fashion at Chloe’s Boutique.">
-    <meta name="twitter:image" content="images/og-image.jpg">
-
-    <!-- Schema Markup (Google) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ClothingStore",
-        "name": "Chloe's Boutique",
-        "url": "https://st10492251.github.io/CHLOES-BOUTIQUE/",
-        "image": "https://st10492251.github.io/CHLOES-BOUTIQUE/images/logo.png",
-        "description": "A modern boutique offering luxury women's fashion, accessories, and handbags.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "South Africa"
-        }
-    }
-
-</script>
-
-
 </head>
-<body>
-
-<header class="header">
-    <div class="container">
-      <h1 class="logo">Chloe's Boutique</h1>
+<body class="home-page">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Chloe's Boutique</a>
       <nav class="nav">
-        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <ul id="nav-list">
-
-        <nav>
-        <link rel="stylesheet"href="style.css">
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="cart.html">Cart</a> |
-        <a href="about.html">About Us</a> |
-        <a href="contact.html">Contact</a>
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart <span class="cart-badge"></span></a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome!</h2>
+  <main class="container">
+    <section class="hero">
+      <div>
+         <h2>Welcome!</h2>
             <p>Welcome to our online boutique.Enjoy your shopping experience.</p>
-            <img src="Chloe Boutique Banner Design.png" alt="shopping Banner" width="1950">
-        <a href="products.html" class="btn">Shop Now</a>
-    </main>
+        <h2 class="headline">Timeless pieces. Bold colour.</h2>
+        <p class="lead">Explore Chloe's collection of elegant garments.</p>
+        <p class="button"><a class="btn" href="products.html">Shop now!!</a></p>
+      </div>
+      <div class="hero-media"><img src="Chloe Boutique Banner Design.png"></div>
+    </section>
    
 <section class="gallery">
     <h2>Our Gallery</h2>

@@ -1,82 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <script defer src="js/script.js"></script>
-  <!-- paste SEO block here, set page title -->
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Products — Chloe's Boutique</title>
+  <meta name="description" content="Browse Chloe's Boutique product catalog: dresses, handbags and accessories.">
   <link rel="stylesheet" href="css/style.css">
-  
-
-  <!-- ===== SEO + Social + Structured Data ===== -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>Products | Chloe’s Boutique</title>
-<meta name="description" content="Browse Chloe’s Boutique product catalog: stylish dresses, handbags, and luxury accessories.">
-<link rel="canonical" href="https://st10492251.github.io/CHLOES-BOUTIQUE/products.html">
-
-</script>
-<!-- ========================================= -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header>
+<body class="products-page">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Chloe's Boutique</a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="cart.html">Cart <span class="cart-badge"></span></a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-     <link rel="stylesheet"href="style.css">
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="cart.html">Cart</a> |
-        <a href="about.html">About Us</a> |
-        <a href="contact.html">Contact</a></header>
-
-  <main class="container">
+  <main class="container product-section">
     <h1>Products</h1>
-
-    <section id="productsGrid" class="products-grid">
-      <!-- Example product card -->
-      <article class="product-card" data-id="dress-001" data-name="Floral Midi Dress" data-price="599.00" data-image="RED DRESS.webp">
-        <img src="RED DRESS.webp" alt="Floral Midi Dress">
-        <h3 class="product-name">Floral Midi Dress</h3>
+    <div class="products-grid" id="productsGrid">
+      <!--  product card - ensure data attributes match script.js -->
+      <article class="product-card" data-id="dress-001" data-name="Maxi Dress" data-price="599.00" data-image="images/dress1.jpg">
+        <img src="Orange maxi dress.png" alt="Maxi Dress">
+        <div class="product-name">Maxi Dress</div>
         <div class="product-price">R599.00</div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart" data-id="dress-001" data-name="Maxi Dress" data-price="599.00" data-image="images/dress1.jpg">Add to cart</button>
       </article>
 
-      <article class="product-card" data-id="bag-001" data-name="Handcrafted Handbag" data-price="899.00" data-image="chanel CROSSBODY BAG.webp">
-        <img src="chanel CROSSBODY BAG.webp" alt="Handcrafted Handbag">
-        <h3 class="product-name">Chanel crossbbody bag</h3>
+      <article class="product-card" data-id="bag-001" data-name="Handcrafted Handbag" data-price="899.00" data-image="images/handbag1.jpg">
+        <img src="chanel CROSSBODY BAG.webp" alt="Chanel Handbag">
+        <div class="product-name">Chanel Handbag</div>
         <div class="product-price">R899.00</div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart" data-id="bag-001" data-name="Handcrafted Handbag" data-price="899.00" data-image="images/handbag1.jpg">Add to cart</button>
       </article>
-<article class="product-card" data-id="Shoe-001" data-name="Blue red bottoms" data-price="8000.00" data-image="blue red bottoms.webp">
-        <img src="blue red bottoms.webp" alt="Red Bottoms">
-        <h3 class="product-name">Red Bottoms</h3>
-        <div class="product-price">R8000.00</div>
-        <button class="add-to-cart">Add to cart</button>
-      </article>
-      <article class="product-card" data-id="bag-002" data-name="Handcrafted Handbag" data-price="750.00" data-image="ysl cross body bag.webp">
-        <img src="ysl cross body bag.webp" alt="Handcrafted Handbag">
-        <h3 class="product-name">ysl CROSSBODY bag</h3>
-        <div class="product-price">R750.00</div>
-        <button class="add-to-cart">Add to cart</button>
-      </article>
-      <article class="product-card" data-id="Shoe-002" data-name="sparkly heels" data-price="459.00" data-image="sparkle heels.avif">
-        <img src="sparkle heels.avif" alt="sparkly heels">
-        <h3 class="product-name">sparkly heels</h3>
-        <div class="product-price">R459.00</div>
-        <button class="add-to-cart">Add to cart</button>
-      </article>
-      <!-- add as many as you like -->
-    </section>
 
-    <a href="cart.html" class="btn">View Cart (<span class="cart-badge"></span>)</a>
+      <article class="product-card" data-id="dress-002" data-name="Evening Slip Dress" data-price="749.00" data-image="images/dress2.jpg">
+        <img src="RED DRESS.webp" alt="Evening Slip Dress">
+        <div class="product-name">Evening Slip Dress</div>
+        <div class="product-price">R749.00</div>
+        <button class="add-to-cart" data-id="dress-002" data-name="Evening Slip Dress" data-price="749.00" data-image="images/dress2.jpg">Add to cart</button>
+      </article>
+
+       <article class="product-card" data-id="bag-002" data-name="ysl Handbag" data-price="999.00" data-image="images/handbag1.jpg">
+        <img src="ysl cross body bag.webp" alt="ysl  Handbag">
+        <div class="product-name">ysl Handbag</div>
+        <div class="product-price">R999.00</div>
+        <button class="add-to-cart" data-id="bag-002" data-name="ysl Handbag" data-price="999.00" data-image="images/handbag1.jpg">Add to cart</button>
+      </article>
+
+       <article class="product-card" data-id="shoe-001" data-name="Black shoes" data-price="1500.00" data-image="images/shoe1.jpg">
+        <img src="red bottoms.jfif" alt="red bottoms">
+        <div class="product-name">Red Bottoms</div>
+        <div class="product-price">R1500.00</div>
+        <button class="add-to-cart" data-id="bag-001" data-name="Black shoes" data-price="899.00" data-image="images/shoes1.jpg">Add to cart</button>
+      </article>
+
+      <!-- Add more product cards as needed -->
+    </div>
+
+    <p class="text-center"><a class="btn" href="cart.html">View Cart (<span class="cart-badge"></span>)</a></p>
   </main>
 
-  <footer>
-    <!-- social icons -->
-     <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="2025"></span> Chloe's Boutique</p>
+    </div>
   </footer>
 </body>
 </html>
-
