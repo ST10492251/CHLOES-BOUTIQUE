@@ -1,49 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Cart — Chloe's Boutique</title>
   <meta name="description" content="View your cart and checkout at Chloe's Boutique.">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
+
+
 <body class="cart-page">
+
   <header class="header">
     <div class="container header-inner">
       <a class="logo" href="index.html">Chloe's Boutique</a>
+
       <nav class="nav">
         <button class="nav-toggle" aria-label="Open menu">☰</button>
+
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="cart.html" class="active">Cart <span class="cart-badge"></span></a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="index.html"> Home </a> | </li>
+
+          <li><a href="products.html"> Products </a> | </li>
+
+          <li><a href="cart.html" class="active"> Cart <span class="cart-badge"> </span></a> | </li>
+
+          <li><a href="about.html"> About us </a> | </li>
+
+          <li><a href="contact.html"> Contact us </a> | </li>
         </ul>
-        </ul>
+
       </nav>
     </div>
   </header>
 
-  <main class="container cart-section">
-    <h1>Your Cart</h1>
-    <div class="cart-layout">
-      <div id="cartItems"></div>
 
+  <main class="container cart-section">
+
+    <h1>Your Cart</h1>
+
+    <div class="cart-layout">
+
+      <!-- Cart Items (Filled by JS) -->
+      <div id="cartItems">
+        <p style="text-align:center; color:#ff007f;">Your cart is empty.</p>
+      </div>
+
+      <!-- Summary -->
       <aside class="cart-summary">
         <div id="cartTotal">R0.00</div>
-        <div style="margin-top:12px">
-          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
-          <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
-        </div>
+
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
       </aside>
+
     </div>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="2025"></span> Chloe's Boutique</p>
+      <p>&copy; 2025 Chloe's Boutique</p>
     </div>
   </footer>
+
 </body>
 </html>
