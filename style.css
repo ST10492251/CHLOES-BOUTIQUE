@@ -18,9 +18,6 @@
   --base: 16px;
 }
 
-/* -----------------------------------------------------
-   GLOBAL RESET + BASE STYLE
------------------------------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -34,11 +31,9 @@ body {
   line-height: 1.6;
 }
 
-/* -----------------------------------------------------
-   HEADER + NAVIGATION
------------------------------------------------------ */
+/* Header */
 .header {
-  background: palevioletred;
+  background:palevioletred;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ad65bd;
   position: sticky;
@@ -51,7 +46,6 @@ body {
   color: #d48bba;
 }
 
-/* Navigation */
 .nav ul {
   list-style: none;
   display: flex;
@@ -70,17 +64,7 @@ body {
   color: pink;
 }
 
-/* Mobile Menu Button */
-#menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-}
-
-/* -----------------------------------------------------
-   HERO SECTION
------------------------------------------------------ */
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 5rem 2rem;
@@ -92,13 +76,72 @@ body {
   color: #8e3659;
 }
 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+}
+
+
+  /* cart badge */
+.cart-badge {
+  display: inline-block;
+  background:palevioletred;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.9rem;
+  min-width: 22px; text-align:center;
+}
+
+/* cart table */
+.cart-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.cart-table th, .cart-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #eee; text-align: left; }
+.cart-thumb { width: 60px; height:60px; object-fit:cover; border-radius:6px; margin-right:0.5rem; }
+
+/* totals */
+.totals-row { margin-top: 0.5rem; font-size: 1rem; }
+.total { font-size: 1.1rem; }
+
+/* small secondary button */
+.btn.secondary { background: #f2f2f2; color:#333; margin-left:0.5rem; }
+
+/* responsive */
+@media (max-width: 700px) {
+  .cart-table thead { display:none; }
+  .cart-table tr { display:block; margin-bottom:1rem; border:1px solid #f0f0f0; padding:0.6rem; border-radius:8px; }
+  .cart-table td { display:block; padding:0.2rem 0; }
+}
+
+}
+
+
+
 .hero .btn {
   margin-top: 1.5rem;
 }
 
-/* -----------------------------------------------------
-   BUTTONS
------------------------------------------------------ */
+/* Buttons */
 .btn {
   background: rgb(204, 141, 162);
   color: #fff;
@@ -114,145 +157,85 @@ body {
   transform: scale(1.05);
 }
 
-.btn.secondary {
-  background: #f2f2f2;
-  color: #333;
-  margin-left: 0.5rem;
-}
-
-/* -----------------------------------------------------
-   GALLERY GRID
------------------------------------------------------ */
+/* ---- GALLERY GRID ---- */
 .gallery {
-  padding: 40px 0;
-  text-align: center;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: pink;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: pink;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 0 10px;
 }
 
 .gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform .3s ease, box-shadow .3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .gallery-item img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
 }
 
 .gallery-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* -----------------------------------------------------
-   LIGHTBOX
------------------------------------------------------ */
+/* ---- LIGHTBOX ---- */
 #galleryLightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
 }
 
 #galleryLightbox.open {
-  display: flex;
+    display: flex;
 }
 
 #galleryLightbox img {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 #galleryLightbox .close-btn {
-  position: absolute;
-  top: 25px;
-  right: 35px;
-  font-size: 2.5rem;
-  color: pink;
-  cursor: pointer;
-  transition: transform .2s ease;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 2.5rem;
+    color:pink;
+    cursor: pointer;
+    transition: transform .2s ease;
 }
 
 #galleryLightbox .close-btn:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-/* -----------------------------------------------------
-   CART SYSTEM STYLES
------------------------------------------------------ */
-
-/* Cart Badge */
-.cart-badge {
-  display: inline-block;
-  background: palevioletred;
-  color: #fff;
-  border-radius: 999px;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.9rem;
-  min-width: 22px;
-  text-align: center;
-}
-
-/* Cart Table */
-.cart-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.cart-table th,
-.cart-table td {
-  padding: 0.6rem 0.8rem;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-
-.cart-thumb {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 0.5rem;
-}
-
-/* Cart Totals */
-.totals-row {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-
-.total {
-  font-size: 1.1rem;
-}
-
-/* -----------------------------------------------------
-   FORMS (Contact, Checkout)
------------------------------------------------------ */
+/* Forms */
 .form-section {
   padding: 3rem;
   text-align: center;
@@ -272,9 +255,7 @@ input, textarea, select {
   border-radius: 8px;
 }
 
-/* -----------------------------------------------------
-   FOOTER
------------------------------------------------------ */
+/* Footer */
 footer {
   background: #f9f3f0;
   padding: 1rem;
@@ -298,58 +279,12 @@ footer {
   transform: scale(1.2);
 }
 
-/* -----------------------------------------------------
-   ANIMATIONS
------------------------------------------------------ */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
 }
 
-/* -----------------------------------------------------
-   RESPONSIVE MEDIA QUERIES
------------------------------------------------------ */
 
-/* Navigation Responsiveness */
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    display: none;
-  }
 
-  #menu-toggle {
-    display: block;
-  }
-
-  .nav.open ul {
-    display: flex;
-  }
-}
-
-/* Cart table responsive */
-@media (max-width: 700px) {
-  .cart-table thead {
-    display: none;
-  }
-
-  .cart-table tr {
-    display: block;
-    margin-bottom: 1rem;
-    border: 1px solid #f0f0f0;
-    padding: 0.6rem;
-    border-radius: 8px;
-  }
-
-  .cart-table td {
-    display: block;
-    padding: 0.2rem 0;
-  }
-}
