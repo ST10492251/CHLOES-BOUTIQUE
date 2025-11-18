@@ -18,29 +18,9 @@
   --base: 16px;
 }
 
-/* ============================================================
-   CHLOE'S BOUTIQUE — FULL WEBSITE STYLESHEET
-   Modern | Feminine | Responsive | Pink Palette
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   ROOT VARIABLES
------------------------------------------------------------- */
-:root {
-  --font-main: 'Poppins', sans-serif;
-  --color-dark: #333;
-  --color-muted: #777;
-
-  /* Default Accents (overwritten per page) */
-  --page-bg: #fff;
-  --page-surface: #fff;
-  --page-accent: #f3a6c1;
-  --page-accent-contrast: #522636;
-}
-
-/* ------------------------------------------------------------
-   GLOBAL RESET
------------------------------------------------------------- */
+/* -----------------------------------------------------
+   GLOBAL RESET + BASE STYLE
+----------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -48,163 +28,197 @@
 }
 
 body {
-  font-family: var(--font-main);
-  background: var(--page-bg);
-  color: var(--color-dark);
+  font-family: 'Poppins', sans-serif;
+  background: #fffafa;
+  color: #333;
   line-height: 1.6;
 }
 
-/* ------------------------------------------------------------
-   GLOBAL ELEMENTS
------------------------------------------------------------- */
-h1, h2, h3 {
-  font-weight: 600;
-  color: var(--page-accent-contrast);
-}
-
-img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-/* ------------------------------------------------------------
+/* -----------------------------------------------------
    HEADER + NAVIGATION
------------------------------------------------------------- */
+----------------------------------------------------- */
 .header {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  background: palevioletred;
   padding: 1rem 2rem;
+  border-bottom: 1px solid #ad65bd;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: #d48bba;
 }
 
+/* Navigation */
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .nav a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: #444;
   font-weight: 500;
-  transition: 0.2s;
+  transition: color 0.3s;
 }
 
 .nav a:hover,
 .nav a.active {
-  color: var(--page-accent);
+  color: pink;
 }
 
+/* Mobile Menu Button */
 #menu-toggle {
   display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
 }
 
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    display: none;
-    background: #fff;
-    padding: 1rem;
-    width: 100%;
-  }
-
-  .nav.open ul { display: flex; }
-
-  #menu-toggle {
-    display: block;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-  }
-}
-
-/* ------------------------------------------------------------
+/* -----------------------------------------------------
    HERO SECTION
------------------------------------------------------------- */
+----------------------------------------------------- */
 .hero {
-  padding: 5rem 2rem;
   text-align: center;
-  background: var(--page-surface);
+  padding: 5rem 2rem;
+  background: #df80a0;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #8e3659;
 }
 
-.hero p {
-  max-width: 650px;
-  margin: 1rem auto;
-  color: var(--color-muted);
+.hero .btn {
+  margin-top: 1.5rem;
 }
 
-/* ------------------------------------------------------------
+/* -----------------------------------------------------
    BUTTONS
------------------------------------------------------------- */
+----------------------------------------------------- */
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--page-accent);
+  background: rgb(204, 141, 162);
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.25s;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  background: #b15a60;
+  transform: scale(1.05);
 }
 
 .btn.secondary {
-  background: #f4f4f4;
+  background: #f2f2f2;
   color: #333;
+  margin-left: 0.5rem;
 }
 
-/* ------------------------------------------------------------
-   PRODUCT GRID
------------------------------------------------------------- */
-.product-section {
-  padding: 3rem 2rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-}
-
-.product-card {
-  background: var(--page-surface);
-  padding: 1rem;
-  border-radius: 12px;
+/* -----------------------------------------------------
+   GALLERY GRID
+----------------------------------------------------- */
+.gallery {
+  padding: 40px 0;
   text-align: center;
-  border-left: 4px solid rgba(0,0,0,0.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-  transition: 0.25s;
 }
 
-.product-card:hover {
-  transform: translateY(-4px);
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: pink;
 }
 
-/* ------------------------------------------------------------
-   CART PAGE STYLES
------------------------------------------------------------- */
-.cart-section {
-  padding: 3rem 2rem;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 0 10px;
 }
 
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* -----------------------------------------------------
+   LIGHTBOX
+----------------------------------------------------- */
+#galleryLightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+#galleryLightbox.open {
+  display: flex;
+}
+
+#galleryLightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+#galleryLightbox .close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2.5rem;
+  color: pink;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+#galleryLightbox .close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* -----------------------------------------------------
+   CART SYSTEM STYLES
+----------------------------------------------------- */
+
+/* Cart Badge */
+.cart-badge {
+  display: inline-block;
+  background: palevioletred;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.9rem;
+  min-width: 22px;
+  text-align: center;
+}
+
+/* Cart Table */
 .cart-table {
   width: 100%;
   border-collapse: collapse;
@@ -213,126 +227,129 @@ img {
 
 .cart-table th,
 .cart-table td {
-  padding: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #eee;
   text-align: left;
-  border-bottom: 1px solid #f1c7d5;
 }
 
 .cart-thumb {
   width: 60px;
   height: 60px;
-  border-radius: 8px;
   object-fit: cover;
+  border-radius: 6px;
+  margin-right: 0.5rem;
 }
 
-.cart-badge {
-  display: inline-block;
-  background: var(--page-accent);
-  color: #fff;
-  border-radius: 50px;
-  padding: 0.1rem 0.45rem;
-  font-size: 0.85rem;
+/* Cart Totals */
+.totals-row {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-/* Mobile Cart Layout */
+.total {
+  font-size: 1.1rem;
+}
+
+/* -----------------------------------------------------
+   FORMS (Contact, Checkout)
+----------------------------------------------------- */
+.form-section {
+  padding: 3rem;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+footer {
+  background: #f9f3f0;
+  padding: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: #b15a60;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d48b91;
+  transform: scale(1.2);
+}
+
+/* -----------------------------------------------------
+   ANIMATIONS
+----------------------------------------------------- */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* -----------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+----------------------------------------------------- */
+
+/* Navigation Responsiveness */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+}
+
+/* Cart table responsive */
 @media (max-width: 700px) {
-  .cart-table thead { display: none; }
+  .cart-table thead {
+    display: none;
+  }
 
   .cart-table tr {
     display: block;
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid #f9d8e6;
     margin-bottom: 1rem;
+    border: 1px solid #f0f0f0;
+    padding: 0.6rem;
+    border-radius: 8px;
   }
 
   .cart-table td {
     display: block;
-    padding: 0.4rem 0;
+    padding: 0.2rem 0;
   }
-}
-
-/* ------------------------------------------------------------
-   ABOUT PAGE
------------------------------------------------------------- */
-.about-section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.about-section p {
-  margin-bottom: 1rem;
-  color: var(--color-muted);
-}
-
-/* ------------------------------------------------------------
-   GALLERY / LIGHTBOX
------------------------------------------------------------- */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.gallery-grid img {
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.04);
-}
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 900;
-}
-
-.lightbox img {
-  max-width: 90%;
-  border-radius: 12px;
-}
-
-/* ------------------------------------------------------------
-   FOOTER
------------------------------------------------------------- */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(255, 220, 230, 0.4);
-  color: var(--color-muted);
-}
-
-/* ------------------------------------------------------------
-   PAGE-SPECIFIC THEMES
------------------------------------------------------------- */
-
-/* PRODUCTS PAGE */
-.products-page {
-  --page-bg: #fff6f9;
-  --page-surface: #fff0f4;
-  --page-accent: #f3a6c1;
-  --page-accent-contrast: #61263a;
-}
-
-/* CART PAGE */
-.cart-page {
-  --page-bg: #fff2f6;
-  --page-surface: #ffe9f0;
-  --page-accent: #e89ab3;
-  --page-accent-contrast: #5a2130;
-}
-
-/* ABOUT PAGE */
-.about-page {
-  --page-bg: #fff8f9;
-  --page-surface: #fff3f6;
-  --page-accent: #d48b9d;
-  --page-accent-contrast: #5b2734;
 }
