@@ -1,31 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - CHLOES BOUTIQUE</title>
+   <script defer src="js/script.js"></script>
+  <!-- paste SEO block here -->
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <!-- ===== SEO + Social + Structured Data ===== -->
+<title>Your Cart | Chloe’s Boutique</title>
+<meta name="description" content="View and manage the items in your Chloe’s Boutique shopping cart.">
+<link rel="canonical" href="https://st10492251.github.io/CHLOES-BOUTIQUE/cart.html">
+
+</script>
+<!-- ========================================= -->
+
 </head>
 <body>
-    <header> 
-        <nav>
-            <link rel="stylesheet"href="style.css">  
+  <header> <link rel="stylesheet"href="style.css">
         <a href="index.html">Home</a> |
         <a href="products.html">Products</a> |
         <a href="cart.html">Cart</a> |
         <a href="about.html">About Us</a> |
-        <a href="contact.html">Contact</a>
-    
-        </nav>
-    </header>
-    <main>
-        <h2>MY CART</h2>
-        <p>No items added at the moment</p>
+        <a href="contact.html">Contact</a></header>
 
-        <p><strong>Total:R0</strong></p>
-    </main>
-    <footer>
-        <p>&copy; 2025 CHLOES BOUTIQUE</p>
-    </footer>
-    
+  <main class="container">
+  
+
+    <div id="cartItems" class="cart-items"></div>
+
+   <h1>Your Cart</h1>
+
+<div id="cart-items"></div>
+
+<h2 id="cart-total"></h2>
+
+<button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+
+
+    <!-- Accessibility live region for cart updates (optional) -->
+    <div id="cartA11yLive" aria-live="polite" class="sr-only"></div>
+  </main>
+
+  <footer>
+    <!-- social icons -->
+     <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+  </footer>
 </body>
 </html>
+

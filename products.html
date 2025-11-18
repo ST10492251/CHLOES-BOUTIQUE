@@ -1,130 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - CHLOES BOUTIQUE</title>
+   <script defer src="js/script.js"></script>
+  <!-- paste SEO block here, set page title -->
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <!-- ===== SEO + Social + Structured Data ===== -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Products | Chloe’s Boutique</title>
+<meta name="description" content="Browse Chloe’s Boutique product catalog: stylish dresses, handbags, and luxury accessories.">
+<link rel="canonical" href="https://st10492251.github.io/CHLOES-BOUTIQUE/products.html">
+
+</script>
+<!-- ========================================= -->
+
 </head>
 <body>
-    <header>
-        <h1>OUR PRODUCTS</h1>
-        <nav>
-            <link rel="stylesheet"href="style.css">
+  <header>
 
-            <a href="index.html">Home</a> |
-            <a href="products.html">Products</a> |
-            <a href="cart.html">Cart</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Trending products</h2>
-        <ul>
-            <li>
-                <h3> MAXI DRESS</h3>
-                 <img src="Orange maxi dress.png"
-                 srcset=" Orange maxi dress.png 480w,Orange maxi dress.png 768w, chaneOrange maxi dress.png 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="Orange Maxi Dress"
-                 >
-                 <p>Price:R250.00</p>
-                 <button onclick="AddToCart('MAXI DRESS, 250')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3>CHANEL DRESS</h3>
-                    <img src="White Chanel Dress.jpg"
-                    srcset="White Chanel Dress.jpg 480w,White Chanel Dress.jpg 768w, White Chanel Dress.jpg 1200w"
-                    sizes="(max-width:480px)100vw,
-                    (max-width:768px)50vw,33vw"
-                    alt="White Chanel Dress"
-                    >
-                    <p>Price:R300.00</p>
-                    <button onclick="AddToCart('CHANEL DRESS, 300')"> Add to Cart </button>
+     <link rel="stylesheet"href="style.css">
+        <a href="index.html">Home</a> |
+        <a href="products.html">Products</a> |
+        <a href="cart.html">Cart</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact</a></header>
 
-                 </li>
-                 <li>
-                    <h3>RED DRESS</h3>
-                    <img src="RED DRESS.webp"
-                    srcset="RED DRESS.webp 480w,RED DRESS.webp 768w, RED DRESS.webp 1200w"
-                    sizes="(max-width:480px)100vw,
-                    (max-width:768px)50vw,33vw"
-                    alt="RED DRESS"
-                    >
-                    <p>Price:R200.00</p>
-                    <button onclick="AddToCart('RED DRESS, 200')"> Add to Cart </button>
-                 </li>
-                 <li>
+  <main class="container">
+    <h1>Products</h1>
 
-                 <li><h3>YSL BAG </h3>
-                 <img src="ysl cross body bag.webp"
-                 srcset="ysl cross body bag.webp 480w,ysl cross body bag.webp 768w, ysl cross body bag.webp 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="YSL crossbody bag"
-                 >
-                 <p>Price:R2500.00</p>
-                 <button onclick="AddToCart('YSL BAG, 2500')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3> BLACK RED BOTTOMS</h3>
-                 <img src="red bottoms.jfif"
-                 srcset="red bottoms.jfif 480w,red bottoms.jfif 768w, red bottoms.jfif 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="red bottoms"
-                 >
-                 <p>Price:R4500.00</p>
-                 <button onclick="AddToCart('BLACK RED BOTTOMS, 4500')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3>CHANEL BAG</h3>
-                 <img src="chanel CROSSBODY BAG.webp"
-                 srcset="chanel CROSSBODY BAG.webp 480w,chanel CROSSBODY BAG.webp 768w, chanel CROSSBODY BAG.webp 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="Chanel crossbody bag">
-                 <p>Price:R6000.00</p>
-                 <button onclick="AddToCart('CHANEL BAG, 6000')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3>CROSSBODY BAG</h3>
-                 <img src="cross body bag.jpg"
-                 srcset="cross body bag.jpg 480w,cross body bag.jpg 768w, cross body bag.jpg 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt=" crossbody bag">
-                 <p>Price:R250.00</p>
-                 <button onclick="AddToCart('CROSSBODY BAG, 250')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3>BLUE RED BOTTOMS</h3>
-                 <img src="blue red bottoms.webp"
-                 srcset="blue red bottoms.webp 480w,blue red bottoms.webp 768w, blue red bottoms.webp 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="red bottoms"
-                 >
-                 <p>Price:R7500.00</p>
-                 <button onclick="AddToCart('BLUE RED BOTTOMS, 7500')"> Add to Cart </button>
-                 </li>
-                 <li>
-                    <h3>SPARKLE HEELS</h3>
-                 <img src="sparkle heels.avif" 
-                 srcset="sparkle heels.avif 480w,sparkle heels.avif 768w, sparkle heels.avif 1200w"
-                 sizes="(max-width:480px)100vw,
-                 (max-width:768px)50vw,33vw"
-                 alt="Sparkle heels">
-                 <p>Price:R500.00</p>
-                 <button onclick="AddToCart('SPARKLE HEELS, 500')"> Add to Cart </button>
-                 </li>
-                 
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2025 CHLOES BOUTIQUE</p>
-    </footer>
-    
+    <section id="productsGrid" class="products-grid">
+      <!-- Example product card -->
+      <article class="product-card" data-id="dress-001" data-name="Floral Midi Dress" data-price="599.00" data-image="RED DRESS.webp">
+        <img src="RED DRESS.webp" alt="Floral Midi Dress">
+        <h3 class="product-name">Floral Midi Dress</h3>
+        <div class="product-price">R599.00</div>
+        <button class="add-to-cart">Add to cart</button>
+      </article>
+
+      <article class="product-card" data-id="bag-001" data-name="Handcrafted Handbag" data-price="899.00" data-image="chanel CROSSBODY BAG.webp">
+        <img src="chanel CROSSBODY BAG.webp" alt="Handcrafted Handbag">
+        <h3 class="product-name">Chanel crossbbody bag</h3>
+        <div class="product-price">R899.00</div>
+        <button class="add-to-cart">Add to cart</button>
+      </article>
+<article class="product-card" data-id="Shoe-001" data-name="Blue red bottoms" data-price="8000.00" data-image="blue red bottoms.webp">
+        <img src="blue red bottoms.webp" alt="Red Bottoms">
+        <h3 class="product-name">Red Bottoms</h3>
+        <div class="product-price">R8000.00</div>
+        <button class="add-to-cart">Add to cart</button>
+      </article>
+      <article class="product-card" data-id="bag-002" data-name="Handcrafted Handbag" data-price="750.00" data-image="ysl cross body bag.webp">
+        <img src="ysl cross body bag.webp" alt="Handcrafted Handbag">
+        <h3 class="product-name">ysl CROSSBODY bag</h3>
+        <div class="product-price">R750.00</div>
+        <button class="add-to-cart">Add to cart</button>
+      </article>
+      <article class="product-card" data-id="Shoe-002" data-name="sparkly heels" data-price="459.00" data-image="sparkle heels.avif">
+        <img src="sparkle heels.avif" alt="sparkly heels">
+        <h3 class="product-name">sparkly heels</h3>
+        <div class="product-price">R459.00</div>
+        <button class="add-to-cart">Add to cart</button>
+      </article>
+      <!-- add as many as you like -->
+    </section>
+
+    <a href="cart.html" class="btn">View Cart (<span class="cart-badge"></span>)</a>
+  </main>
+
+  <footer>
+    <!-- social icons -->
+     <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+  </footer>
 </body>
 </html>
+
